@@ -8,14 +8,19 @@ public class Main {
 
     //3.2 - Métodos e Funções
     public static void main(String[] args) {
-        System.out.println("Meu primeiro codigo em java!!!");
-        System.out.println("Calculo de Areas");
-        System.out.println("Boa noite!!");
-    }
 
-    public void calcularAreaModoextenso(){
+        calcularAreaModoCompacto();
+        calcularAreaModoextenso();
+
+    }
+    //--------------------------------------------------------------------------------
+    //Criar metodo extenso para calculo de area.
+
+    public static void calcularAreaModoextenso(){
 
         //Calculo de area - Exemplo o tamanho do tapete ou do piso
+
+        System.out.println("Calculo de Areas modo extenso");
 
         //definaição das váriaveis
         int largura;
@@ -32,8 +37,12 @@ public class Main {
         System.out.println("Para largura de " + largura + " e o comprimento de "
                 + comprimento + " A area e de " + resultado + " m2");
     }
+// Criar metodo compacto para calculo de area.
 
-    public void calcularAreaModoCompacto(){
+    public static void calcularAreaModoCompacto(){
+
+        System.out.println("Calculo de Areas compacto");
+
         int largura = 4;
         int comprimento = 3;
 

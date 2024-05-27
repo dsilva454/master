@@ -23,9 +23,11 @@ public class Main {
         // instanciar uma entrada do sistema
         Scanner scanner = new Scanner(System.in);
         System.out.println("MENU DE OPÇÕES");
-        System.out.println("c - Calcular Area modo compacto");
-        System.out.println("e - Calcular Area modo extenso");
-        System.out.println("i - IfSimples");
+        System.out.println("c ou C - Calcular Area modo compacto");
+        System.out.println("d ou D - Contar Ate 10");
+        System.out.println("e ou E - Calcular Area modo extenso");
+        System.out.println("i ou I - IfSimples");
+        System.out.println("r ou R - Contagem Regressiva");
         System.out.println("Digite a opçao desejada: ");
 
         String opcao = scanner.next();
@@ -35,17 +37,30 @@ public class Main {
         //String opcao = "curto";
 
         switch (opcao){
-            case  "i":
-                System.out.println("Você escolheu executar o método ifSimples");
-                ifSimples();
-                break;
             case  "c":
+            case  "C":
                 System.out.println("Você escolheu executar o método compacto");
                 calcularAreaModoCompacto();
                 break;
+            case  "d":
+            case  "D":
+                System.out.println("Você escolheu contar Ate 10");
+                contarAteDez();
+                break;
             case  "e":
+            case  "E":
                 System.out.println("Você escolheu executar o método extenso");
                 calcularAreaModoextenso();
+                break;
+            case  "i":
+            case  "I":
+                System.out.println("Você escolheu executar o método ifSimples");
+                ifSimples();
+                break;
+            case  "r":
+            case  "R":
+                System.out.println("Você escolheu Contagem regressiva");
+                contarDeDezAZero();
                 break;
             default:
                 System.out.println("Você não escolheu um método válido");
@@ -107,5 +122,26 @@ public class Main {
 
         System.out.println("Para largura de " + largura + " e o comprimento de "
                 + comprimento + " A area e de " + largura * comprimento + " m2");
+    }
+
+    //Metodo contagem progressiva
+
+    public static void contarAteDez(){
+        // Loops ou Repetições
+        // for = repetição incondicional
+
+        System.out.println("Contagem crescente");
+
+        for (int numero = 1; numero < 11; numero++){
+            System.out.println(numero);
+        }
+    }
+
+    //Método contagem regressiva
+
+    public static void contarDeDezAZero(){
+        for (int numero = 10; numero > -1; numero--){
+            System.out.println(numero);
+        }
     }
 }
